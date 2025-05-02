@@ -1,78 +1,28 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    line-height: 1.5;
-    color: #333333;
-}
-body, .contact-input, .contact-textarea  {
-    font-family: 'Poppins', sans-serif;
-}
-.contact-page {
-    min-height: 100vh;
-    max-width: 900px;
-    overflow: hidden;
-    margin: 0 auto;
-}
-.contact-form-section {
-    display: flex;
-    width: 800px;
-    padding: 30px;
-    margin: 0 auto;
-}
-.contact-image {
-    transform: rotate(90deg);
-    width: 900px;
-    margin-left: -60px;
-}
-.contact-form-heading {
-    font-size: 48px;
-    font-weight: bold;
-    margin: 0;
-}
-.contact-form-heading span {
-    color: #007000;
-}
-.contact-form-intro {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-.contact-input {
-    display: block;
-    width: 300px;
-    margin: 5px auto 15px;
-    border-radius: 20px;
-    padding: 8px 20px;
-    font-size: 16px;
-    border: 2px solid #333333;
-}
-.contact-textarea {
-    max-width: 300px;
-    margin: 5px auto 15px;
-    padding: 16px 20px;
-    border: 2px solid #333333;
-    border-radius: 20px;
-}
-.contact-input::-webkit-input-placeholder, .contact-textarea::-webkit-input-placeholder {
-    color: #aaaaaa;
-}
-.contact-submit-button {
-    border: 2px solid #333333;
-    padding: 8px 20px;
-    border-radius: 40px;
-    margin: 10px auto 0;
-    width: 200px;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-}
-.contact-submit-button:hover {
-    background-color: #dddddd;
-}
-
-/* 
-Current issues:
-- Placeholder text has poor text contrast.
-- Missing alternative text for images.
-- Missing labels for input fields.
-- Ambiguous button text.
-- Semantic HTML is lacking.
-- Font-sizes are defined in px.
+<html>
+    <head>
+        <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+        
+        <!-- Fonts & Icons -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body class="contact-page">
+        <div id="main">
+            <!-- Form section -->
+            <div class="contact-form-section">
+                <form>
+                    <h2 class="contact-form-heading">Reach <span>Out</span></h2>
+                    <div class="contact-form-intro">Curious about something? Complete these fields and "get in touch", as you humans say. 🤙</div>
+                    <input class="contact-input" type="text" placeholder="Full name" />
+                    <input class="contact-input" type="text" placeholder="Email" />
+                    <textarea class="contact-textarea" rows="4" cols="50" placeholder="Your message..."></textarea>
+                    <button class="contact-submit-button" type="button" onclick="submitForm()">Done 🎉</button>
+                </form>
+                <img class="contact-image" src="images/connect.png" />
+            </div>
+        </div>
+    </body>
+</html>
